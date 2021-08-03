@@ -100,7 +100,6 @@
 
     		// Assign an ID
 			updateData.id = parseInt(newId);
-			console.log("Modification de la génération de l'id avec Date.now() dans store.js L77-L109 : "+updateData.id)
 
 			todos.push(updateData);
 			localStorage[this._dbName] = JSON.stringify(data);
