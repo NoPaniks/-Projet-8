@@ -93,7 +93,6 @@
 	 * object and it'll handle the DOM insertion and saving of the new item.
 	 */
 	Controller.prototype.addItem = function (title) {
-		console.log("modification de adddItem en addItem, controller.js L95")
 		let self = this;
 
 		if (title.trim() === '') {
@@ -163,11 +162,6 @@
 			items = data;
 		});
 
-		items.forEach(function(item) {
-			if (item.id === id) {
-				console.log("Element with ID: " + id + " has been removed.");
-			}
-		});
 
 		self.model.remove(id, function () {
 			self.view.render('removeItem', id);
